@@ -1,4 +1,9 @@
 <?php
+namespace ZfcUserAdmin;
+
+use Zend\Router\Http\Literal;
+use Zend\Router\Http\Segment;
+
 return array(
     'view_manager' => array(
         'template_path_stack' => array(
@@ -15,7 +20,7 @@ return array(
             'zfcadmin' => array(
                 'child_routes' => array(
                     'zfcuseradmin' => array(
-                        'type' => 'Literal',
+                        'type' => Literal::class,
                         'priority' => 1000,
                         'options' => array(
                             'route' => '/user',
@@ -26,7 +31,7 @@ return array(
                         ),
                         'child_routes' =>array(
                             'list' => array(
-                                'type' => 'Segment',
+                                'type' => Segment::class,
                                 'options' => array(
                                     'route' => '/list[/:p]',
                                     'defaults' => array(
@@ -36,7 +41,7 @@ return array(
                                 ),
                             ),
                             'create' => array(
-                                'type' => 'Literal',
+                                'type' => Literal::class,
                                 'options' => array(
                                     'route' => '/create',
                                     'defaults' => array(
@@ -46,7 +51,7 @@ return array(
                                 ),
                             ),
                             'edit' => array(
-                                'type' => 'Segment',
+                                'type' => Segment::class,
                                 'options' => array(
                                     'route' => '/edit/:userId',
                                     'defaults' => array(
@@ -57,7 +62,7 @@ return array(
                                 ),
                             ),
                             'remove' => array(
-                                'type' => 'Segment',
+                                'type' => Segment::class,
                                 'options' => array(
                                     'route' => '/remove/:userId',
                                     'defaults' => array(

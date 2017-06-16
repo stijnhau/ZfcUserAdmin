@@ -13,10 +13,8 @@ use ZfcUserAdmin\Options\ModuleOptions;
 use ZfcUser\Mapper\UserInterface as UserMapperInterface;
 use ZfcUser\Options\ModuleOptions as ZfcUserModuleOptions;
 
-
 class User extends EventProvider implements ServiceManagerAwareInterface
 {
-
     /**
      * @var UserMapperInterface
      */

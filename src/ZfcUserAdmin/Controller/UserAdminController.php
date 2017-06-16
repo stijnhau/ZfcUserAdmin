@@ -11,7 +11,8 @@ use ZfcUserAdmin\Options\ModuleOptions;
 
 class UserAdminController extends AbstractActionController
 {
-    protected $options, $userMapper;
+    protected $options;
+    protected $userMapper;
     protected $zfcUserOptions;
     /**
      * @var \ZfcUserAdmin\Service\User
